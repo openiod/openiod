@@ -1,4 +1,4 @@
- 
+
 /**
  *
  * @module openiod-mongodb
@@ -11,119 +11,37 @@
 var MongoClient = require('mongodb').MongoClient
     //, mongojs = require('mongojs')
     , format = require('util').format;
-	
-var pg = require('pg');
-
-var sqlConnString;
-
-var	initPgDbConnection = function (options) {
-	// PostgreSql
-	//console.log(options);
-	sqlConnString = options.param.systemParameter.databaseType + '://' + 
-		options.param.systemParameter.databaseAccount + ':' + 
-		options.param.systemParameter.databasePassword + '@' + 
-		options.param.systemParameter.databaseServer + '/' +
-		options.param.systemCode + '_' + options.param.systemParameter.databaseName;
-
-};
-	
-function executeSql (query, callback) {
-	console.log('sql start: ');
-	var client = new pg.Client(sqlConnString);
-	client.connect(function(err) {
-  		if(err) {
-    		console.error('could not connect to postgres', err);
-			callback(result, err);
-			return;
-  		}
-  		client.query(query, function(err, result) {
-    		if(err) {
-      			console.error('error running query', err);
-				callback(result, err);
-				return;
-    		}
-    		//console.log('sql result: ' + result);
-			callback(result.rows, err);
-    		client.end();
-  		});
-	});
-};
-
-// special site ID's for project Eindhoven Airport 2016
-var projectEindhovenAirport = {};
-projectEindhovenAirport.GEO01_SRETI34={};
-projectEindhovenAirport.GEO01_SRETI34r={};
-projectEindhovenAirport.GEO01_SRETI31={};
-projectEindhovenAirport.GEO01_SRETI31r={};
-projectEindhovenAirport.RWS01_MONICA_00D00218B00F60200087={};
-projectEindhovenAirport.RWS01_MONICA_00D00218BC006020000F={};
-projectEindhovenAirport.RWS01_MONIBAS_0020vwm1587ra={};
-projectEindhovenAirport.RWS01_MONIBAS_0020vwm1591ra={};
-
-
-
 
 var client;
-
 var database;
-
 var self;
-
-
 
 module.exports = {
 
 	init: function (name, param, callback) {
-		console.log('mongoDB init:' + name);	
-		//Connect to the cluster		
+		console.log('mongoDB init:' + name);
+		//Connect to the cluster
 //		MongoClient.connect('mongodb://192.168.0.92:27017/openiod', function(err, db) {
 		MongoClient.connect('mongodb://149.210.201.210:27017/openiod', function(err, db) {
 			console.log('mongoDB connect:' + err);
  	  	 	if(err) throw err;
 
 			database = db;
-			
 			console.log('mongoDB database:' + database);
-
-/*
-			var collection = db.collection('test_insert');
-    		collection.insert({a:2}, function(err, docs) {
-
-      			collection.count(function(err, count) {
-        			console.log(format("count = %s", count));
-      			});
-
-				// Locate all the entries using find
-      			collection.find().toArray(function(err, results) {
-        			console.dir(results);
-        			// Let's close the db
-        			db.close();
-      			});
-			});
-*/
 			if(callback != undefined) callback();
-
-  		});
-		
-
+  	});
 	},  // end of init
-	
+
 	connectDb: function (name, option, callback) {
-			
 		MongoClient.connect('mongodb://149.210.201.210:27017/'+name, function(err, db) {
  	  	 	if(err) throw err;
 			callback(db, option);
   		});
-		
-
 	},  // end of connectDb
 
 	closeDb: function () {
-			
 		database.close();
-
 	},  // end of closeMongoClient
-	
 
 	removeCollectionRecord: function(param, callback) {
 		this.connectDb('openiod', {collectionName: param.collectionName, location:param.location }, this.executeRemoveCollectionRecord);
@@ -131,98 +49,62 @@ module.exports = {
 
 	executeRemoveCollectionRecord: function(db, option) {
 
-		var _collectionNameImport 	= option.collectionName+'_import';	
+		var _collectionNameImport 	= option.collectionName+'_import';
 		var collection = database.collection(_collectionNameImport);
-		//collection.remove({}, function(err, removed) {
-		//	console.log('Deleted from import collection: %s', removed);
-		//console.log('Insert into collection: %s', collectionName);
 		collection.remove({}, function(err, removed) {
 			if (err) {
 				console.log('mongodb remove err: ' + err);
 			}
-			//console.log('Inserted into collection: %s', collectionName);
-			//option.callback(err, removed);		
 		});
-		//});
-		
 	},
 
-
 	saveCollectionRecord: function(collectionName, recordObject, callback) {
-	
 		var collection = database.collection(collectionName);
-		//collection.remove({}, function(err, removed) {
-		//	console.log('Deleted from import collection: %s', removed);
-		//console.log('Insert into collection: %s', collectionName);
 		collection.insert(recordObject, function(err, docs) {
 			if (err) {
 				console.log('mongodb insert err: ' + err);
 			}
-			//console.log('Inserted into collection: %s', collectionName);
-			callback(err, docs);		
-			
-				//	counter--;
-				//	if (counter <= 0) {
-				//		console.log('Counter is ' + counter + ' closing the database.');
-				//		db.close();
-				//		callback();
-				//	}
-
-				//	if (counter <= 10) {
-				//		console.log('Counter is ' + counter );
-				//	}
-					
-					
-      			//	collection.count(function(err, count) {
-        		//		console.log(format("count = %s", count));
+			callback(err, docs);
 		});
-		//});
-		
 	},
 
 	dropCollection: function(collectionName, option, callback) {
-	
 		var collection = database.collection(collectionName);
 		collection.drop(callback);
-		
 	},
 
 	datex2Import2Model: function (param, callback) {
-	
 		self = this;
-
-		console.log('Connect to database for import %s %s', param.collectionName, param.location);	
-		
+		console.log('Connect to database for import %s %s', param.collectionName, param.location);
 		if (param.collectionName == 'NDW_siteTable' ) {
 			this.connectDb('openiod', {collectionName: param.collectionName, location:param.location }, this.datex2ImportSiteTable2ModelProcessing);
 		} else {
 			this.connectDb('openiod', {collectionName: param.collectionName, location:param.location }, this.datex2Import2ModelProcessing);
 		}
-
 	},
-	
+
 	datex2ImportSiteTable2ModelProcessing: function (db, option) {
 		var _collectionNameImport 	= option.collectionName+'_import';
 		var _collectionName 		= option.collectionName;
-		
+
 		var lat,lng;
-		
+
 		var collectionIn 		= db.collection(_collectionNameImport);
 		//var collectionOut 	= db.collection(_collectionName);
 		console.log('%s %s', _collectionName, 'x' );
-		
+
 		db.createCollection(_collectionName, function(err, collectionOut) {
-		
+
 			console.log('Start removing current data');
-			collectionOut.remove({"_id.location":option.location}, function(err, nrRecords) { 
+			collectionOut.remove({"_id.location":option.location}, function(err, nrRecords) {
 				if (err) { console.log(err); return};
 				console.log('End removing current data');
 				console.log('Start creating bulk insert for new data');
 				var bulk = collectionOut.initializeUnorderedBulkOp();
-			
+
 				var recordCountIn 	= 0;
 				var recordCountOut 	= 0;
-			
+
 				var stream = collectionIn.find().stream();
 
 				// Execute find on all the documents
@@ -235,108 +117,100 @@ module.exports = {
 						db.close();
 					});
 					console.log('Bulk execute activated');
-					
+
 				});
-				
+
 				stream.on('data', function(data) {
 					//assert.ok(data != null);
 					lat = 0;
 					lng = 0;
-					
-					
+
+
 					var newRecord = {};
 					newRecord._id = { location: "NL", id:data._id.recordId };
-					
-					newRecord = self.datex2Import2Model_NDW_siteTable(newRecord, data);	
-					
 
-// strict EHV 					if (newRecord.lat >= 51.4000474851216 && newRecord.lat <= 51.4970777335796 && newRecord.lng >= 5.35671787194048 && newRecord.lng <= 5.54885266393083 ) { 
-					// EHV region
-					
-					// get envelope:  select ST_AsText(ST_Envelope(geom4326)) from cbsgem2012 where gm_naam = 'Assen'; 
-					
-					
-					if (newRecord.lat >= 51.388 && newRecord.lat <= 51.53 && 
-						newRecord.lng >= 5.300 && newRecord.lng <= 5.61 ) { 
+					newRecord = self.datex2Import2Model_NDW_siteTable(newRecord, data);
+					if (newRecord.lat >= 51.388 && newRecord.lat <= 51.53 &&
+						newRecord.lng >= 5.300 && newRecord.lng <= 5.61 ) {
 						// Eindhoven
 						var newRecordEHV = Object.create(newRecord);
 						newRecordEHV._id.location = 'EHV';
-						bulk.insert( newRecordEHV ); 
+						bulk.insert( newRecordEHV );
 						recordCountOut++;
 					}
 
-//					if (newRecord.lat >= 52.9325151469765 && newRecord.lat <= 53.0619202709735 && 
-//						newRecord.lng >= 6.48394723197304 && newRecord.lng <= 6.63264599587745 ) { 
-					if (newRecord.lat >= 52.92 && newRecord.lat <= 53.10 && 
-						newRecord.lng >= 6.45 && newRecord.lng <= 6.65 ) { 
+//					if (newRecord.lat >= 52.9325151469765 && newRecord.lat <= 53.0619202709735 &&
+//						newRecord.lng >= 6.48394723197304 && newRecord.lng <= 6.63264599587745 ) {
+					if (newRecord.lat >= 52.92 && newRecord.lat <= 53.10 &&
+						newRecord.lng >= 6.45 && newRecord.lng <= 6.65 ) {
 						// Assen: "POLYGON((6.48394723197304 52.9325151469765,6.48394723197304 53.0619202709735,6.63264599587745 53.0619202709735,6.63264599587745 52.9325151469765,6.48394723197304 52.9325151469765))"
 						var newRecordASS = Object.create(newRecord);
 						newRecordASS._id.location = 'ASS';
-						bulk.insert( newRecordASS ); 
+						bulk.insert( newRecordASS );
 						recordCountOut++;
 					}
 
-					if (newRecord.lat >= 51.95 && newRecord.lat <= 52.05 && 
-						newRecord.lng >= 4.28 && newRecord.lng <= 4.45 ) { 
+					if (newRecord.lat >= 51.95 && newRecord.lat <= 52.05 &&
+						newRecord.lng >= 4.28 && newRecord.lng <= 4.45 ) {
 						// Delft: "POLYGON((4.32021774343079 51.9663162404985,4.32021774343079 52.0325992360215,4.4079112385328 52.0325992360215,4.4079112385328 51.9663162404985,4.32021774343079 51.9663162404985))"
 						var newRecordDLF = Object.create(newRecord);
 						newRecordDLF._id.location = 'DLF';
-						bulk.insert( newRecordDLF ); 
+						bulk.insert( newRecordDLF );
 						recordCountOut++;
-					}					
-									
-//					if (newRecord.lat >= 50.0 && newRecord.lat <= 52.2 && newRecord.lng >= 5.0 && newRecord.lng <= 6.0 ) { 
+					}
+
+//					if (newRecord.lat >= 50.0 && newRecord.lat <= 52.2 && newRecord.lng >= 5.0 && newRecord.lng <= 6.0 ) {
 //						newRecord._id.location = '';
-//						if (newRecord._id.location == option.location ) { 
-//							bulk.insert( newRecord ); 
+//						if (newRecord._id.location == option.location ) {
+//							bulk.insert( newRecord );
 //							recordCountOut++;
 //						}
-//					}		
-//					if (newRecord._id.location == option.location ) { 
+//					}
+//					if (newRecord._id.location == option.location ) {
 
 //					newRecord._id.location = 'NL';
-//					bulk.insert( newRecord ); 
+//					bulk.insert( newRecord );
 //					recordCountOut++;
 
-								
+
 					recordCountIn++;
 					if (recordCountIn%1000==0) {
 						console.log('       items processed: %s (%s)', recordCountIn, recordCountOut);
-					}	
-				
+					}
+
 				});
-			
+
 			});
 
 		});
 
 	},
 
-	
+
 	datex2Import2ModelProcessing: function (db, option) {
 		var _collectionNameImport = option.collectionName+'_import';
 		var _collectionName = option.collectionName;
-		
+
 		var NDW_siteTable = db.collection('NDW_siteTable');
-				
+
 		var lat,lng;
-		
+
 		var _retrievedDate = new Date();
-		
+
 		var collectionIn 		= db.collection(_collectionNameImport);
 		var collectionOut 		= db.collection(_collectionName);
 //		console.log('%s %s', _collectionName, 'x' );
-		
+
 		db.createCollection(_collectionName, function(err, collectionOut) {
 			if (err) { console.log(err); return};
 			//var cursor = collectionIn.find();
-			
+
 			//var bulk = db.inventory.initializeUnorderedBulkOp();
 			//var bulk = collectionOut.initializeUnorderedBulkOp();
-			
+
 			var recordCountIn 	= 0;
 			var recordCountOut	= 0;
-			
+
 //			var stream = NDW_siteTable.find({'_id.location':'EHV'}).stream();
 //			var stream = NDW_siteTable.find({'_id.location':'ASS'}).stream();
 			var stream = NDW_siteTable.find().stream();
@@ -353,9 +227,9 @@ module.exports = {
 					//db.close();
 //				});
 				//console.log('Bulk execute activated');
-				
+
 			});
-			
+
 			stream.on('data', function(data) {
 				//console.log('%s %s', data._id.id, 'siteTable' )
 				//assert.ok(data != null);
@@ -369,11 +243,11 @@ module.exports = {
 				newId.location 		= newRecord._id.location;
 				newId.id 			= newRecord._id.id;
 				newRecord._id 		= newId;
-				
+
 				//console.log(newRecord._id);
 
 				//newRecord._id.retrievedDate = _retrievedDate;
-			
+
 				var cursor = collectionIn.find({'_id.recordId': data._id.id });
 
 				switch(_collectionName) {
@@ -389,26 +263,26 @@ module.exports = {
 					default:
 						console.log('UNKNOWN DATEXII Collection name !!');
 				}
-				
+
 
 
 			//	bulk.insert( newRecord ); //{ _id:item._id.recordId, lat:lat, lng:lng,  });
 			//	collectionOut.save( newRecord ); //{ _id:item._id.recordId, lat:lat, lng:lng,  });
-				
+
 				recordCountIn++;
 				if (recordCountIn%100==0) {
 //					var bulkResult = bulk.execute();
 					console.log('       items processed: %s', recordCountIn);
 //					console.log(bulkResult);
 //					var bulk = collectionOut.initializeUnorderedBulkOp()
-				}	
-								
-				
+				}
+
+
 //				console.log('%s %s', item._id.recordId, item.elements[0].name );
 //			});
 
 			});
-			
+
 			//cursor.nextObject(function(err, item) {
 			//cursor.forEach.limit(10).toArray(function(err, item) {
 //				collectionOut.write(item._id.recordId, item.elements[0].name );
@@ -430,8 +304,8 @@ module.exports = {
 
           db.close();
         })
-      })		
-*/		
+      })
+*/
 
 
 	},
@@ -447,7 +321,7 @@ module.exports = {
 					if ( element.name == 'computationMethod' ) {
 						newRecord.computationMethod = element.text;
 					}
-					
+
 					if ( element.name == 'measurementEquipmentTypeUsed' ) {
 						//newRecord.measurementEquipmentTypeUsed = 'todo???';
 						//if (element.elements && element.elements[0]) {
@@ -455,7 +329,7 @@ module.exports = {
 						//}
 						//newRecord.measurementEquipmentTypeUsed = element.elements[0].elements[0].text;
 					}
-					
+
 					if ( element.name == 'measurementSiteName' ) {
 						newRecord.measurementSiteName = element.elements[0].elements[0].text;
 					}
@@ -463,14 +337,14 @@ module.exports = {
 					if ( element.name == 'measurementSiteNumberOfLanes' ) {
 						newRecord.measurementSiteNumberOfLanes = parseFloat(element.text);
 					}
-					
+
 					if ( element.name == 'measurementSpecificCharacteristics' ) {
 						var _characteristicsKey, _characteristicsValue;
 						var _measurementSpecificCharacteristics = {};
 						_measurementSpecificCharacteristics.index = element.attributes.index;
-						
+
 						var _characteristics = element.elements[0].elements;
-						
+
 						for (var j=0;j<_characteristics.length;j++) {
 							_characteristicsKey 	= _characteristics[j].name;
 							if (_characteristics[j].text) {
@@ -490,33 +364,33 @@ module.exports = {
 											var _sub2Elements = _characteristicsElement.elements;
 											var vehicleCharacteristics = {};
 											for (var l=0;l<_sub2Elements.length;l++) {
-												if (_sub2Elements[l].name == 'comparisonOperator') 
+												if (_sub2Elements[l].name == 'comparisonOperator')
 													vehicleCharacteristics.comparisonOperator 	= _sub2Elements[l].text;
-												if (_sub2Elements[l].name == 'vehicleLength') 
+												if (_sub2Elements[l].name == 'vehicleLength')
 													vehicleCharacteristics.vehicleLength 		= _sub2Elements[l].text;
 											}
 											_sub.push(vehicleCharacteristics);
-										}	
+										}
 									}
 
 								}
 								_characteristicsValue	= _sub;
 							}
-							_measurementSpecificCharacteristics[_characteristicsKey] = _characteristicsValue;	
+							_measurementSpecificCharacteristics[_characteristicsKey] = _characteristicsValue;
 						}
 
 						newRecord.measurementSpecificCharacteristics.push(_measurementSpecificCharacteristics);
 					}
-					
-					
-					
+
+
+
 					if ( element.name == 'measurementSiteLocation' && element.attributes && element.attributes['xsi:type'] && element.attributes['xsi:type'] == 'Point' ) {
-					
+
 						//console.log(element);
-						
+
 						if (element.elements[0] && element.elements[0].name == 'locationForDisplay' ) {
 							var _locationForDisplayElement = element.elements[0];
-							
+
 							if (_locationForDisplayElement.elements[0].name == 'latitude' && _locationForDisplayElement.elements[1].name == 'longitude') {
 								newRecord.lat = parseFloat(_locationForDisplayElement.elements[0].text);
 								newRecord.lng = parseFloat(_locationForDisplayElement.elements[1].text);
@@ -530,25 +404,25 @@ module.exports = {
 
 				}
 
-		return newRecord;		
-	
+		return newRecord;
+
 	},
 
 	datex2Import2Model_NDW_trafficSpeed: function(newCollection, newRecord, cursor) {
-	
+
 		//var _retrievedDate = new Date();
-		
+
 
 		newRecord.measuredValues = [];
-		
+
 		cursor.nextObject(function(err, data) {
    			if (err) { console.log(err); return; };
-			if (data == null) { 
+			if (data == null) {
 				// no trafficSpeed record for this location from siteTable
-				console.log('Record not found in NDW_trafficSpeed collection %s', newRecord._id.id); 
+				console.log('Record not found in NDW_trafficSpeed collection %s', newRecord._id.id);
 				return;
 			};
-			
+
 			//console.log('New record for: %s %s', newRecord._id.id, data.elements.length);
 
 			for (var i=0; i<data.elements.length;i++) {
@@ -557,16 +431,16 @@ module.exports = {
 				if ( element.name == 'measurementTimeDefault' ) {
 					newRecord.measurementTimeDefault = element.text;
 				}
-										
+
 				if ( element.name == 'measuredValue' ) {
 					//var _characteristicsKey, _characteristicsValue;
-						
+
 
 					var _measuredValues = {};
 					_measuredValues.index = element.attributes.index;
-					
+
 					var _measuredValuesElements = element.elements[0].elements[0].elements;
-				
+
 					for (var j=0;j<_measuredValuesElements.length;j++) {
 						var _measuredValuesElement = _measuredValuesElements[j];
 
@@ -590,12 +464,12 @@ module.exports = {
 								_measuredValues.speed = _measuredValuesElement.elements[0].text;
 							}
 						}
-				
+
 					}
 
 					newRecord.measuredValues.push(_measuredValues);
 				}
-					
+
 			}
 
 			//	var newId = {};
@@ -603,16 +477,16 @@ module.exports = {
 			//	newId.location 		= newRecord._id.location;
 			//	newId.id 			= newRecord._id.id;
 			//	newRecord._id = newId;
-			
+
 			//var _query = JSON.stringify(newRecord);
 			//console.log(_query);
-			
+
 			var recordId = data._id.recordId;
-			
-			
+
+
 //			for measurementSpecificCharacteristics
-			
-			
+
+
 /*			if (projectEindhovenAirport[recordId]) {
 				console.log('Project Eindhoven Airport: '+ recordId);
 				var postgresRecordNew = {};
@@ -621,7 +495,7 @@ module.exports = {
 				postgresRecordNew.measuredate 		= recordObjects.newRecordObject._id.retrievedDate;
 				postgresRecordNew.lat 				= recordObjects.newRecordObject.lat;
 				postgresRecordNew.lng 				= recordObjects.newRecordObject.lng;
-				
+
 					var trafficFlow = {};
 					trafficFlow.total = 0;
 					trafficInd = false;
@@ -632,11 +506,11 @@ module.exports = {
 								if (_site.measuredValues[j] == undefined) {
 									console.log('ERROR: %s value: %s', _site._id.id, _site.measuredValues[j]);
 								} else {
-									if ( _site.measuredValues[j].vehicleFlowRate != -1 && _site.measuredValues[j].vehicleFlowRate != undefined ) { 
+									if ( _site.measuredValues[j].vehicleFlowRate != -1 && _site.measuredValues[j].vehicleFlowRate != undefined ) {
 										//console.log('trafficFlow per measurement: %s %s', trafficFlow.total, _site.measuredValues[j].vehicleFlowRate);
 										trafficFlow.total += parseFloat(_site.measuredValues[j].vehicleFlowRate);
 										trafficInd = true;
-									}	
+									}
 								}
 							}
 						}
@@ -646,13 +520,13 @@ module.exports = {
 						_trafficSpeedSite.properties.trafficFlow = trafficFlow;
 					}
 					// todo insert into PostgreSQL
-															
+
 			}
 */
 
 			newCollection.save(newRecord);
   	    })
-		
+
 	},
 
 	datex2Import2Model_NDW_travelTime: function(newCollection, newRecord, cursor) {
@@ -660,31 +534,31 @@ module.exports = {
 		newRecord.measuredValues = [];
 
 		cursor.nextObject(function(err, data) {
-		
+
    			if (err) { console.log(err); return; };
-			if (data == null) { 
+			if (data == null) {
 				// no travelTime record for this location from siteTable
-				// console.log('Record not found in NDW_travelTime collection %s', newRecord._id.id); 
+				// console.log('Record not found in NDW_travelTime collection %s', newRecord._id.id);
 				return;
 			};
-			
+
 			console.log('New record for: %s %s', newRecord._id.id, data);
-			
+
 			for (var i=0; i<data.elements.length;i++) {
 				var element = data.elements[i];
 
 				if ( element.name == 'measurementTimeDefault' ) {
 					newRecord.measurementTimeDefault = element.text;
 				}
-										
+
 				if ( element.name == 'measuredValue' ) {
 					//var _characteristicsKey, _characteristicsValue;
-						
+
 					var _measuredValues = {};
 					_measuredValues.index = element.attributes.index;
-					
+
 					var _measuredValuesElements = element.elements[0].elements[0].elements;
-				
+
 					for (var j=0;j<_measuredValuesElements.length;j++) {
 						var _measuredValuesElement = _measuredValuesElements[j];
 
@@ -699,32 +573,32 @@ module.exports = {
 						if (_measuredValuesElement.name == 'travelTime') {
 							_measuredValues.duration = _measuredValuesElement.elements[0].text;
 						}
-				
+
 					}
 
 					newRecord.measuredValues.push(_measuredValues);
 				}
-					
+
 			}
 			newCollection.save(newRecord);
 		})
 	},
-	
+
 
 	// http://localhost:4000/SCAPE604/openiod?SERVICE=SOS&REQUEST=GetTrafficSpeed&location=EHV&format=json
-	
+
 	getTrafficSpeed: function(option, callback) {
 		option.context = this;
 		this.connectDb('openiod', {location:option.location, maxRetrievedDate: option.maxRetrievedDate, valueType: option.valueType, callback: callback, context:this }, this.getTrafficSpeedMaxDate );
-	
+
 	},
-	
-	
+
+
 	getTrafficSpeedMaxDate: function(db, option) {
 
 
 		var NDW_trafficSpeed 	= db.collection('NDW_trafficSpeed');
-		
+
 		if (option.maxRetrievedDate == undefined) {
 			option.maxRetrievedDate = new Date(); //.toISOString();
 			console.log('option maxRetrievedDate set to new Date object: ' + option.maxRetrievedDate);
@@ -743,12 +617,12 @@ module.exports = {
 			}
 //			console.log('Latest date: ' + _highestRetrievedDate);
 //			console.log('Latest date: ' + _highestRetrievedDate._id);
-		
+
 /*
 			var maxRetrievedDate = option.maxRetrievedDate?new Date(option.maxRetrievedDate):new Date();
 
 			var minRetrievedDateTime = new Date(maxRetrievedDate).getTime() - 60000; // -1 minute  //  - 540000; // -9 minutes
-			var minRetrievedDate = new Date(minRetrievedDateTime); //.toISOString(); 
+			var minRetrievedDate = new Date(minRetrievedDateTime); //.toISOString();
 			console.log('min date:' + minRetrievedDate);
 			console.log('max date:' + option.maxRetrievedDate);
 */
@@ -756,17 +630,17 @@ module.exports = {
 			option.context.getTrafficSpeedData(db, option);
 
 		});;
-		
-	
+
+
 	},
-	
+
 
 	getTrafficSpeedData: function(db, option) {
-	
+
 		var trafficFlowInd, trafficSpeedInd;
 		var NDW_trafficSpeed 	= db.collection('NDW_trafficSpeed');
 		var trafficSpeedGeoJson = [];
-		
+
 		if (option.maxRetrievedDate == undefined) {
 			option.maxRetrievedDate = new Date(); //.toISOString();
 		}
@@ -776,23 +650,23 @@ module.exports = {
 		var _hrd_cursor = NDW_trafficSpeed.find({"_id.location":option.location, "_id.retrievedDate": {"$lte": option.maxRetrievedDate } },{'_id':'_id'}, {"sort":[['_id','desc']], "limit": 1}).toArray(function(err, results){
     		console.log(results); // output all records
 			option.maxRetrievedDate = results[0]._id.retrievedDate;
-			
+
 		});;
-		
+
 //		console.log('Latest date: ' + _highestRetrievedDate);
 //		console.log('Latest date: ' + _highestRetrievedDate._id);
-*/		
+*/
 		var maxRetrievedDate = option.maxRetrievedDate?new Date(option.maxRetrievedDate):new Date();
 
 		var minRetrievedDateTime = new Date(maxRetrievedDate).getTime() - 120000; // -2 minute  //  - 540000; // -9 minutes
-		var minRetrievedDate = new Date(minRetrievedDateTime); //.toISOString(); 
+		var minRetrievedDate = new Date(minRetrievedDateTime); //.toISOString();
 		console.log('min date:' + minRetrievedDate);
 		console.log('max date:' + option.maxRetrievedDate);
-		
+
 		NDW_trafficSpeed.find({"_id.location":option.location, "_id.retrievedDate": {"$lte": maxRetrievedDate, "$gte": minRetrievedDate } }).toArray(function(err, results){
 
 			for (var i=0;i<results.length;i++) {
-			
+
 				var _site = results[i];
 
 //			    console.log(i); // output all records
@@ -810,7 +684,7 @@ module.exports = {
 				_trafficSpeedSite.properties.site.retrievedDate = _site._id.retrievedDate;
 				//_trafficSpeedSite.properties.site.measurementSpecificCharacteristics = _site.measurementSpecificCharacteristics;
 				_trafficSpeedSite.properties.site.measurementTimeDefault = _site.measurementTimeDefault;
-				
+
 				//console.log('Option: %s', option);
 				//console.log(option);
 				if (option.valueType && (option.valueType == "traffic" || option.valueType == "trafficFlow") ) {
@@ -824,11 +698,11 @@ module.exports = {
 								if (_site.measuredValues[j] == undefined) {
 									console.log('ERROR: %s value: %s', _site._id.id, _site.measuredValues[j]);
 								} else {
-									if ( _site.measuredValues[j].vehicleFlowRate != -1 && _site.measuredValues[j].vehicleFlowRate != undefined ) { 
+									if ( _site.measuredValues[j].vehicleFlowRate != -1 && _site.measuredValues[j].vehicleFlowRate != undefined ) {
 										//console.log('trafficFlow per measurement: %s %s', trafficFlow.total, _site.measuredValues[j].vehicleFlowRate);
 										trafficFlow.total += parseFloat(_site.measuredValues[j].vehicleFlowRate);
 										trafficFlowInd = true;
-									}	
+									}
 								}
 							}
 						}
@@ -837,14 +711,14 @@ module.exports = {
 						//console.log('trafficFlow total: %s', trafficFlow.total);
 						_trafficSpeedSite.properties.trafficFlow = trafficFlow;
 					}
-					
+
 				}
-				
+
 				if (option.valueType && (option.valueType == "traffic" || option.valueType == "trafficSpeed") ) {
 					var trafficSpeed 	= {};
 					trafficSpeed.low 	= 999;
 					trafficSpeed.high 	= 0;
-					var speedHigh, speedLow, speedTmp; 
+					var speedHigh, speedLow, speedTmp;
 					trafficSpeedInd = false;
 					for (var j=0;j<_site.measurementSpecificCharacteristics.length;j++) {
 						var _tmpMSC = _site.measurementSpecificCharacteristics[j];
@@ -853,7 +727,7 @@ module.exports = {
 								if (_site.measuredValues[j] == undefined) {
 									console.log('ERROR: %s value: %s', _site._id.id, _site.measuredValues[j]);
 								} else {
-									if ( _site.measuredValues[j].speed != -1  && _site.measuredValues[j].speed != undefined ) { 
+									if ( _site.measuredValues[j].speed != -1  && _site.measuredValues[j].speed != undefined ) {
 										//console.log('trafficSpeed per measurement: %s-%s %s', trafficSpeed.low, trafficSpeed.high, _site.measuredValues[j].speed);
 										speedTmp = parseFloat(_site.measuredValues[j].speed);
 										if (speedTmp > trafficSpeed.high) {
@@ -863,7 +737,7 @@ module.exports = {
 											trafficSpeed.low = speedTmp;
 										}
 										trafficSpeedInd = true;
-									}	
+									}
 								}
 							}
 						}
@@ -872,7 +746,7 @@ module.exports = {
 						//console.log('trafficSpeed low: %s high: %s', trafficSpeed.low, trafficSpeed.high);
 						_trafficSpeedSite.properties.trafficSpeed = trafficSpeed;
 					}
-					
+
 				}
 
 /*
@@ -894,32 +768,32 @@ module.exports = {
 //				var record = recordCursor; //.next();
 			//, measuredValues) {
 			//	if (err) console.log('Error: %s', err );
-		//		console.log( "site: %s %s", _site._id.id, record ); 
+		//		console.log( "site: %s %s", _site._id.id, record );
 //				console.log(record);
-				
+
 		//		for (var key in record) {
 		//			console.log( key, record[key]);
 		//		}
-				
-				
-	//			console.log( measuredValues ); 
-				
+
+
+	//			console.log( measuredValues );
+
 		//		var _measuredValues = measuredValues.measuredValues;
-				
-								
+
+
 			//});
 
    	        	if (trafficFlowInd == true || trafficSpeedInd == true ) {
 					trafficSpeedGeoJson.push(_trafficSpeedSite);
 				}
 			}
-			
-			//console.log( "Returning result dddd1" ); 
+
+			//console.log( "Returning result dddd1" );
 
 			//var cursor2 = NDW_siteTable.find({"_id.location":"EHV"});
 			//console.log(cursor2);
-			
-			console.log( "Returning result dddd " , i ); 
+
+			console.log( "Returning result dddd " , i );
 	//		if (i==results.length-1) {
 				console.log( "Returning result dddd hehehehehe " , i );
 				option.callback(trafficSpeedGeoJson);
@@ -927,22 +801,22 @@ module.exports = {
 
 
 		});
-		
 
-		console.log( "Returning result" ); 
+
+		console.log( "Returning result" );
 		//option.callback(trafficSpeedGeoJson);
-			
+
 	},
 
 
 	datex2ImportReducerMapReduce: function (db, option) {
-	
+
 		var _collectionNameImport = option.collectionName+'_import';
 		var _collectionName = option.collectionName;
-		
+
 		var collection 		= db.collection(_collectionNameImport);
 		var collectionOut 	= db.collection(_collectionName);
-	
+
 		var mapper = function () {
 			var i;
 			var y=0;
@@ -951,26 +825,26 @@ module.exports = {
 			for (i=0; i<x.length;i++ ){ //x.length;i++) {
 			//	y=i;
 			}
-			
+
 			//y=x.name[0];
-			
+
 			//var data = BSON.serialize(this.elements, false, true, false);
-			//y=data;			
-			
+			//y=data;
+
 /*			for (i=0; i<this.elements.length;i++) {
 				var element = this.elements[i];
 
 				if ( element.name = 'measurementSiteLocation' ) {
 					var latElement = elements[0].elements[0];
 					var lngElement = elements[0].elements[1];
-					
+
 					lat = parseFloat(latElement.text);
 					lng = parseFloat(lngElement.text);
 				}
 
 			}
 */
-			
+
 			//console.log('x');
 			emit(this._id.recordId, {
 				y: y,
@@ -979,7 +853,7 @@ module.exports = {
 				lng: lng
 			});
 		};
-		
+
 		var reducer = function (key, values) {
 			var res = values[0];
 			//console.log(res);
@@ -1001,17 +875,17 @@ module.exports = {
 		};
 
 		console.log('MapReduce: ' + _collectionName );
-		
+
 //		for (var key in db) {
 //			console.log(db[key]);
-//		} 
-		
+//		}
+
 //		db[option.collectionName+'_import2'].insert({test:'test'}, function (err, docs) {
 //		db.NDW_siteTable_import.insert({test:'test'}, function (err, docs) {
 //			console.log("DB Insert Completed");
 //		});
-		
-		
+
+
 //		collection.mapReduce(
 		db.NDW_siteTable_import.mapReduce(
 		//[_collectionNameImport].mapReduce(
@@ -1020,26 +894,26 @@ module.exports = {
 				out: 'testcollection' //collectionOut
 			},
 			function(err, docs) {
-			
+
 				console.log('mapreduce callback');
-			
+
 				//db.testcollection.find(function (err, docs) {
 //					if (err) console.log(err);
 //					console.log("\n", docs);
 				//});
-			
+
 			}
 		);
-		
+
 
 
 		console.log('MapReduce ready: ' + _collectionName );
-	
+
 	},
-	
+
 
 	getModel: function (model, param, callback) {
-	
+
 		client.execute("SELECT user_id, fname, lname FROM users", function (err, result) {
            if (!err){
                if ( result.rows.length > 0 ) {
@@ -1055,11 +929,11 @@ module.exports = {
            // Run next function in series
            callback(err, result);
        });
-	
+
 	},
-	
+
 	executeCql: function (cqlFile, param, callback) {
-	
+
 		client.execute(cqlFile, function (err, result) {
            if (!err){
                if ( result.rows != undefined && result.rows.length > 0 ) {
@@ -1074,18 +948,12 @@ module.exports = {
            } else {
 		   		console.log("Cql ERROR: " + err );
 		   }
-		   
+
 		   //console.log("End of: executeCql");
  			//console.log('dit is een test '+ err);
            // Run next function in series
            callback(err, result);
        });
-	
+
 	}
-	
-
-
-
-
-
 } // end of module.exports
