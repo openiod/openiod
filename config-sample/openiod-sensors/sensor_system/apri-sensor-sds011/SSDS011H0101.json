@@ -1,0 +1,66 @@
+{
+  "id": "SSDS011H0101",
+  "name": "ApriSensor SDS011 SSDS011H0101",
+  "nameShort": "ApriSensor SDS011 0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "apri-sensor-sds011-pm25",
+      "name": "ApriSensor SDS011 PM2.5",
+      "swesObservableProperty": "apri-sensor-sds011-pm25",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-sds011-pm10",
+      "name": "ApriSensor SDS011 PM10",
+      "swesObservableProperty": "apri-sensor-sds011-pm10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-sds011-location",
+      "name": "ApriSensor SDS011 Location",
+      "swesObservableProperty": "apri-sensor-sds011-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-sds011-pm25",
+      "name": "ApriSensor SDS011 PM2.5",
+      "swesObservableProperty": "apri-sensor-sds011-pm25",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-sds011-pm10",
+      "name": "ApriSensor SDS011 PM10",
+      "swesObservableProperty": "apri-sensor-sds011-pm10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-sds011-location",
+      "name": "ApriSensor SDS011 Location",
+      "swesObservableProperty": "apri-sensor-sds011-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "apri-sensor-lat",
+      "name": "ApriSensor latitude",
+      "swesObservableProperty": "apri-sensor-latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "apri-sensor-lon",
+      "name": "ApriSensor longitude",
+      "swesObservableProperty": "apri-sensor-longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

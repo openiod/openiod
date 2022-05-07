@@ -1,0 +1,66 @@
+{
+  "id": "station-41",
+  "name": "ApriSensor relHumidity SRHUMH0101",
+  "nameShort": "ApriSensor relHumidity H0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": ""
+  },
+  "input": [
+    {
+      "id": "apri-sensor-am2320-rHum",
+      "name": "ApriSensor AM2320 rHum",
+      "swesObservableProperty": "apri-sensor-am2320-rHum",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-am2320-temperature",
+      "name": "ApriSensor AM2320 Temperature",
+      "swesObservableProperty": "apri-sensor-am2320-temperature",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-am2320-location",
+      "name": "ApriSensor am2320 Location",
+      "swesObservableProperty": "apri-sensor-am2320-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-am2320-rHum",
+      "name": "ApriSensor AM2320 rHum",
+      "swesObservableProperty": "apri-sensor-am2320-rHum",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"Pa"
+    },
+    {
+      "id": "apri-sensor-am2320-temperature",
+      "name": "ApriSensor AM2320 Temperature",
+      "swesObservableProperty": "apri-sensor-am2320-temperature",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"celc"
+    },
+    {
+      "id": "apri-sensor-am2320-location",
+      "name": "ApriSensor AM2320 Location",
+      "swesObservableProperty": "apri-sensor-am2320-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "apri-sensor-am2320-lat",
+      "name": "ApriSensor AM2320 latitude",
+      "swesObservableProperty": "apri-sensor-am2320-latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "apri-sensor-am2320-lon",
+      "name": "ApriSensor AM2320 longitude",
+      "swesObservableProperty": "apri-sensor-am2320-longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

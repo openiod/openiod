@@ -1,0 +1,92 @@
+{
+  "id": "SMICS6814H0101",
+  "name": "ApriSensor MICS6814 SMICS6814H0101",
+  "nameShort": "ApriSensor MICS6814 H0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "apri-sensor-mics6814-co",
+      "name": "ApriSensor MICS6814 CO",
+      "swesObservableProperty": "apri-sensor-mics6814-co",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-mics6814-nh3",
+      "name": "ApriSensor MICS6814 NH3",
+      "swesObservableProperty": "apri-sensor-mics6814-nh3",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-mics6814-no2",
+      "name": "ApriSensor MICS6814 NO2",
+      "swesObservableProperty": "apri-sensor-mics6814-no2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-mics6814-latitude",
+      "name": "ApriSensor MICS6814 Latitude",
+      "swesObservableProperty": "apri-sensor-mics6814-latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-mics6814-longitude",
+      "name": "ApriSensor MICS6814 Longitude",
+      "swesObservableProperty": "apri-sensor-mics6814-longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-mics6814-location",
+      "name": "ApriSensor MICS6814 Location",
+      "swesObservableProperty": "apri-sensor-mics6814-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-mics6814-co",
+      "name": "ApriSensor MICS6814 CO",
+      "swesObservableProperty": "apri-sensor-mics6814-co",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-mics6814-nh3",
+      "name": "ApriSensor MICS6814 NH3",
+      "swesObservableProperty": "apri-sensor-mics6814-nh3",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-mics6814-no2",
+      "name": "ApriSensor MICS6814 NO2",
+      "swesObservableProperty": "apri-sensor-mics6814-no2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-mics6814-location",
+      "name": "ApriSensor MICS6814 Location",
+      "swesObservableProperty": "apri-sensor-mics6814-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "apri-sensor-mics6814-lat",
+      "name": "ApriSensor MICS6814 latitude",
+      "swesObservableProperty": "apri-sensor-mics6814-latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "apri-sensor-mics6814-lon",
+      "name": "ApriSensor MICS6814 longitude",
+      "swesObservableProperty": "apri-sensor-mics6814-longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "SBMP280H0101",
+  "name": "ApriSensor BMP280 SBMP280H0101",
+  "nameShort": "ApriSensor BMP280 H0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "apri-sensor-bmp280-pressure",
+      "name": "ApriSensor BMP280 Luchtdruk",
+      "swesObservableProperty": "apri-sensor-bmp280-pressure",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-bmp280-temperature",
+      "name": "ApriSensor BMP280 Temperature",
+      "swesObservableProperty": "apri-sensor-bmp280-temperature",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-bmp280-latitude",
+      "name": "ApriSensor BMP280 Latitude",
+      "swesObservableProperty": "apri-sensor-bmp280-latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-bmp280-location",
+      "name": "ApriSensor BMP280 Location",
+      "swesObservableProperty": "apri-sensor-bmp280-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-bmp280-pressure",
+      "name": "ApriSensor BMP280 pressure",
+      "swesObservableProperty": "apri-sensor-bmp280-pressure",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"Pa"
+    },
+    {
+      "id": "apri-sensor-bmp280-temperature",
+      "name": "ApriSensor BMP280 Temperature",
+      "swesObservableProperty": "apri-sensor-bmp280-temperature",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"celc"
+    },
+    {
+      "id": "apri-sensor-bmp280-location",
+      "name": "ApriSensor BMP280 Location",
+      "swesObservableProperty": "apri-sensor-bmp280-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "apri-sensor-bmp280-altitude",
+      "name": "ApriSensor BMP280 altitude",
+      "swesObservableProperty": "apri-sensor-bmp280-altitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "apri-sensor-bmp280-lat",
+      "name": "ApriSensor BMP280 latitude",
+      "swesObservableProperty": "apri-sensor-bmp280-latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "apri-sensor-bmp280-lon",
+      "name": "ApriSensor BMP280 longitude",
+      "swesObservableProperty": "apri-sensor-bmp280-longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

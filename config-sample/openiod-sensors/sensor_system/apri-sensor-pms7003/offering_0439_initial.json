@@ -1,0 +1,12 @@
+{
+  "id": "apri-sensor-pms7003",
+  "region": "0439",
+  "offering": {
+    "id": "initial"
+  },
+  "procedure": [
+    {
+      "id": "SPMS7003H0101"
+    }
+  ]
+}

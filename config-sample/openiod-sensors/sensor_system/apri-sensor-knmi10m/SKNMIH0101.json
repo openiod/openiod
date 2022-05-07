@@ -1,0 +1,678 @@
+{
+  "id": "SKNMIH0101",
+  "name": "ApriSensor KNMI SKNMIH0101",
+  "nameShort": "ApriSensor KNMI H0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "apri-sensor-knmi-dd",
+      "name": "ApriSensor KNMI dd wind from direction",
+      "swesObservableProperty": "apri-sensor-knmi-dd",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-ff",
+      "name": "ApriSensor KNMI ff wind speed",
+      "swesObservableProperty": "apri-sensor-knmi-ff",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-gff",
+      "name": "ApriSensor KNMI gff wind speed of gust",
+      "swesObservableProperty": "apri-sensor-knmi-gff",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-ta",
+      "name": "ApriSensor KNMI ta air temperature",
+      "swesObservableProperty": "apri-sensor-knmi-ta",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-rh",
+      "name": "ApriSensor KNMI rh relative humidity",
+      "swesObservableProperty": "apri-sensor-knmi-rh",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-pp",
+      "name": "ApriSensor KNMI pp airpressure at sealevel",
+      "swesObservableProperty": "apri-sensor-knmi-pp",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-zm",
+      "name": "ApriSensor KNMI zm visibility in air",
+      "swesObservableProperty": "apri-sensor-knmi-zm",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-D1H",
+      "name": "ApriSensor KNMI D1H rainfall duration in last hour",
+      "swesObservableProperty": "apri-sensor-knmi-D1H",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-dr",
+      "name": "ApriSensor KNMI dr Precipitation Duration (Rain Gauge) 10 Min Sum",
+      "swesObservableProperty": "apri-sensor-knmi-dr",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-hc",
+      "name": "ApriSensor KNMI hc Cloud Base",
+      "swesObservableProperty": "apri-sensor-knmi-hc",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-hc1",
+      "name": "ApriSensor KNMI hc1 Cloud Base First Layer",
+      "swesObservableProperty": "apri-sensor-knmi-hc1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-hc2",
+      "name": "ApriSensor KNMI hc2 Cloud Base Second Layer",
+      "swesObservableProperty": "apri-sensor-knmi-hc2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-hc3",
+      "name": "ApriSensor KNMI hc3 Cloud Base Third Layer",
+      "swesObservableProperty": "apri-sensor-knmi-hc3",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-nc",
+      "name": "ApriSensor KNMI nc Total cloud cover",
+      "swesObservableProperty": "apri-sensor-knmi-nc",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-nc1",
+      "name": "ApriSensor KNMI nc1 Cloud Amount First Layer",
+      "swesObservableProperty": "apri-sensor-knmi-nc1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-nc2",
+      "name": "ApriSensor KNMI nc2 Cloud Amount Second Layer",
+      "swesObservableProperty": "apri-sensor-knmi-nc2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-nc3",
+      "name": "ApriSensor KNMI nc3 Cloud Amount Third Layer",
+      "swesObservableProperty": "apri-sensor-knmi-nc3",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-pg",
+      "name": "ApriSensor KNMI pg Precipitation Intensity (PWS) 10 Min Average",
+      "swesObservableProperty": "apri-sensor-knmi-pg",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-pr",
+      "name": "ApriSensor KNMI pr Precipitation Duration (PWS) 10 Min Sum",
+      "swesObservableProperty": "apri-sensor-knmi-pr",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-qg",
+      "name": "ApriSensor KNMI qg Global Solar Radiation 10 Min Average",
+      "swesObservableProperty": "apri-sensor-knmi-qg",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-R12H",
+      "name": "ApriSensor KNMI R12H Rainfall in last 12 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-R12H",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-R1H",
+      "name": "ApriSensor KNMI R1H Rainfall in last Hour",
+      "swesObservableProperty": "apri-sensor-knmi-R1H",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-R24H",
+      "name": "ApriSensor KNMI R24H Rainfall in last 24 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-R24H",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-R6H",
+      "name": "ApriSensor KNMI R6H Rainfall in last 6 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-R6H",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-rg",
+      "name": "ApriSensor KNMI rg Precipitation Intensity (Rain Gauge) 10 Min Average",
+      "swesObservableProperty": "apri-sensor-knmi-rg",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-ss",
+      "name": "ApriSensor KNMI ss Sunshine Duration",
+      "swesObservableProperty": "apri-sensor-knmi-ss",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-td",
+      "name": "ApriSensor KNMI td Dew Point Temperature 1.5m 1 Min Average",
+      "swesObservableProperty": "apri-sensor-knmi-td",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-tgn",
+      "name": "ApriSensor KNMI tgn Grass Temperature 10cm 10 Min Minimum",
+      "swesObservableProperty": "apri-sensor-knmi-tgn",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-tgn12",
+      "name": "ApriSensor KNMI tgn12 Grass Temperature Minimum last 12 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-tgn12",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-tgn14",
+      "name": "ApriSensor KNMI tgn14 Grass Temperature Minimum last 14 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-tgn14",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-tgn6",
+      "name": "ApriSensor KNMI tgn6 Grass Temperature Minimum last 6 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-tgn6",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-tn",
+      "name": "ApriSensor KNMI tn Ambient Temperature 1.5m 10 Min Minimum",
+      "swesObservableProperty": "apri-sensor-knmi-tn",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-tn12",
+      "name": "ApriSensor KNMI tn12 Air Temperature Minimum last 12 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-tn12",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-tn14",
+      "name": "ApriSensor KNMI tn14 Air Temperature Minimum last 14 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-tn14",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-tn6",
+      "name": "ApriSensor KNMI tn6 Air Temperature Minimum last 6 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-tn6",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-tx",
+      "name": "ApriSensor KNMI tx Ambient Temperature 1.5m 10 Min Maximum",
+      "swesObservableProperty": "apri-sensor-knmi-tx",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-Tx12",
+      "name": "ApriSensor KNMI Tx12 Air Temperature Maximum last 12 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-Tx12",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-Tx14",
+      "name": "ApriSensor KNMI Tx14 Air Temperature Maximum last 14 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-Tx14",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-Tx6",
+      "name": "ApriSensor KNMI Tx6 Air Temperature Maximum last 6 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-Tx6",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-ww",
+      "name": "ApriSensor KNMI ww wawa Weather Code",
+      "swesObservableProperty": "apri-sensor-knmi-ww",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-pwc",
+      "name": "ApriSensor KNMI pwc Present Weather",
+      "swesObservableProperty": "apri-sensor-knmi-wpc",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-ww-10",
+      "name": "ApriSensor KNMI ww-10 wawa Weather Code for Previous 10 Min Interval",
+      "swesObservableProperty": "apri-sensor-knmi-ww-10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-ts1",
+      "name": "ApriSensor KNMI ts1 Number of Lightning Discharges at Station",
+      "swesObservableProperty": "apri-sensor-knmi-ts1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-ts2",
+      "name": "ApriSensor KNMI ts2 Number of Lightning Discharges near Station",
+      "swesObservableProperty": "apri-sensor-knmi-ts2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-knmi-location",
+      "name": "ApriSensor KNMI Location",
+      "swesObservableProperty": "apri-sensor-knmi-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "apri-sensor-knmi-lat",
+      "name": "ApriSensor latitude",
+      "swesObservableProperty": "apri-sensor-knmi-latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "apri-sensor-knmi-lon",
+      "name": "ApriSensor longitude",
+      "swesObservableProperty": "apri-sensor-knmi-longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "apri-sensor-knmi-height",
+      "name": "ApriSensor height",
+      "swesObservableProperty": "apri-sensor-knmi-height",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-knmi-dd",
+      "name": "ApriSensor KNMI dd wind from direction",
+      "swesObservableProperty": "apri-sensor-knmi-dd",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-ff",
+      "name": "ApriSensor KNMI ff wind speed",
+      "swesObservableProperty": "apri-sensor-knmi-ff",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-gff",
+      "name": "ApriSensor KNMI gff wind speed of gust",
+      "swesObservableProperty": "apri-sensor-knmi-gff",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-ta",
+      "name": "ApriSensor KNMI ta air temperature",
+      "swesObservableProperty": "apri-sensor-knmi-ta",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-rh",
+      "name": "ApriSensor KNMI rh relative humidity",
+      "swesObservableProperty": "apri-sensor-knmi-rh",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-pp",
+      "name": "ApriSensor KNMI pp airpressure at sealevel",
+      "swesObservableProperty": "apri-sensor-knmi-pp",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-zm",
+      "name": "ApriSensor KNMI zm visibility in air",
+      "swesObservableProperty": "apri-sensor-knmi-zm",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-D1H",
+      "name": "ApriSensor KNMI D1H rainfall duration in last hour",
+      "swesObservableProperty": "apri-sensor-knmi-D1H",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-dr",
+      "name": "ApriSensor KNMI dr Precipitation Duration (Rain Gauge) 10 Min Sum",
+      "swesObservableProperty": "apri-sensor-knmi-dr",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-hc",
+      "name": "ApriSensor KNMI hc Cloud Base",
+      "swesObservableProperty": "apri-sensor-knmi-hc",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-hc1",
+      "name": "ApriSensor KNMI hc1 Cloud Base First Layer",
+      "swesObservableProperty": "apri-sensor-knmi-hc1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-hc2",
+      "name": "ApriSensor KNMI hc2 Cloud Base Second Layer",
+      "swesObservableProperty": "apri-sensor-knmi-hc2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-hc3",
+      "name": "ApriSensor KNMI hc3 Cloud Base Third Layer",
+      "swesObservableProperty": "apri-sensor-knmi-hc3",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-nc",
+      "name": "ApriSensor KNMI nc Total cloud cover",
+      "swesObservableProperty": "apri-sensor-knmi-nc",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-nc1",
+      "name": "ApriSensor KNMI nc1 Cloud Amount First Layer",
+      "swesObservableProperty": "apri-sensor-knmi-nc1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-nc2",
+      "name": "ApriSensor KNMI nc2 Cloud Amount Second Layer",
+      "swesObservableProperty": "apri-sensor-knmi-nc2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-nc3",
+      "name": "ApriSensor KNMI nc3 Cloud Amount Third Layer",
+      "swesObservableProperty": "apri-sensor-knmi-nc3",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-pg",
+      "name": "ApriSensor KNMI pg Precipitation Intensity (PWS) 10 Min Average",
+      "swesObservableProperty": "apri-sensor-knmi-pg",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-pr",
+      "name": "ApriSensor KNMI pr Precipitation Duration (PWS) 10 Min Sum",
+      "swesObservableProperty": "apri-sensor-knmi-pr",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-qg",
+      "name": "ApriSensor KNMI qg Global Solar Radiation 10 Min Average",
+      "swesObservableProperty": "apri-sensor-knmi-qg",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-R12H",
+      "name": "ApriSensor KNMI R12H Rainfall in last 12 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-R12H",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-R1H",
+      "name": "ApriSensor KNMI R1H Rainfall in last Hour",
+      "swesObservableProperty": "apri-sensor-knmi-R1H",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-R24H",
+      "name": "ApriSensor KNMI R24H Rainfall in last 24 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-R24H",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-R6H",
+      "name": "ApriSensor KNMI R6H Rainfall in last 6 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-R6H",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-rg",
+      "name": "ApriSensor KNMI rg Precipitation Intensity (Rain Gauge) 10 Min Average",
+      "swesObservableProperty": "apri-sensor-knmi-rg",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-ss",
+      "name": "ApriSensor KNMI ss Sunshine Duration",
+      "swesObservableProperty": "apri-sensor-knmi-ss",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-td",
+      "name": "ApriSensor KNMI td Dew Point Temperature 1.5m 1 Min Average",
+      "swesObservableProperty": "apri-sensor-knmi-td",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-tgn",
+      "name": "ApriSensor KNMI tgn Grass Temperature 10cm 10 Min Minimum",
+      "swesObservableProperty": "apri-sensor-knmi-tgn",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-tgn12",
+      "name": "ApriSensor KNMI tgn12 Grass Temperature Minimum last 12 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-tgn12",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-tgn14",
+      "name": "ApriSensor KNMI tgn14 Grass Temperature Minimum last 14 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-tgn14",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-tgn6",
+      "name": "ApriSensor KNMI tgn6 Grass Temperature Minimum last 6 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-tgn6",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-tn",
+      "name": "ApriSensor KNMI tn Ambient Temperature 1.5m 10 Min Minimum",
+      "swesObservableProperty": "apri-sensor-knmi-tn",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-tn12",
+      "name": "ApriSensor KNMI tn12 Air Temperature Minimum last 12 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-tn12",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-tn14",
+      "name": "ApriSensor KNMI tn14 Air Temperature Minimum last 14 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-tn14",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-tn6",
+      "name": "ApriSensor KNMI tn6 Air Temperature Minimum last 6 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-tn6",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-tx",
+      "name": "ApriSensor KNMI tx Ambient Temperature 1.5m 10 Min Maximum",
+      "swesObservableProperty": "apri-sensor-knmi-tx",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-Tx12",
+      "name": "ApriSensor KNMI Tx12 Air Temperature Maximum last 12 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-Tx12",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-Tx14",
+      "name": "ApriSensor KNMI Tx14 Air Temperature Maximum last 14 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-Tx14",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-Tx6",
+      "name": "ApriSensor KNMI Tx6 Air Temperature Maximum last 6 Hours",
+      "swesObservableProperty": "apri-sensor-knmi-Tx6",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-ww",
+      "name": "ApriSensor KNMI ww wawa Weather Code",
+      "swesObservableProperty": "apri-sensor-knmi-ww",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-pwc",
+      "name": "ApriSensor KNMI pwc Present Weather",
+      "swesObservableProperty": "apri-sensor-knmi-wpc",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-ww-10",
+      "name": "ApriSensor KNMI ww-10 wawa Weather Code for Previous 10 Min Interval",
+      "swesObservableProperty": "apri-sensor-knmi-ww-10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-ts1",
+      "name": "ApriSensor KNMI ts1 Number of Lightning Discharges at Station",
+      "swesObservableProperty": "apri-sensor-knmi-ts1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-ts2",
+      "name": "ApriSensor KNMI ts2 Number of Lightning Discharges near Station",
+      "swesObservableProperty": "apri-sensor-knmi-ts2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-knmi-location",
+      "name": "ApriSensor KNMI Location",
+      "swesObservableProperty": "apri-sensor-knmi-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "apri-sensor-knmi-lat",
+      "name": "ApriSensor latitude",
+      "swesObservableProperty": "apri-sensor-knmi-latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "apri-sensor-knmi-lon",
+      "name": "ApriSensor longitude",
+      "swesObservableProperty": "apri-sensor-knmi-longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "apri-sensor-knmi-height",
+      "name": "ApriSensor height",
+      "swesObservableProperty": "apri-sensor-knmi-height",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

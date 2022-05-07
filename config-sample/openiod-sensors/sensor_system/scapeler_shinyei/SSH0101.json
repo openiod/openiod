@@ -1,0 +1,52 @@
+{
+  "id": "SSH0101",
+  "name": "Scapeler Shinyei PPD42 SSH0101",
+  "nameShort": "Scapeler Shinyei 0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "scapeler_shinyei",
+      "name": "Scapeler Shinyei",
+      "swesObservableProperty": "scapeler_shinyei",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "scapeler_shinyei_location",
+      "name": "Scapeler Shinyei Location",
+      "swesObservableProperty": "scapeler_shinyei_location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "scapeler_shinyei",
+      "name": "Scapeler Shinyei",
+      "swesObservableProperty": "scapeler_shinyei",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "scapeler_shinyei_location",
+      "name": "Scapeler Shinyei Location",
+      "swesObservableProperty": "scapeler_shinyei_location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "scapeler_lat",
+      "name": "Scapeler latitude",
+      "swesObservableProperty": "scapeler_latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "scapeler_lon",
+      "name": "Scapeler longitude",
+      "swesObservableProperty": "scapeler_longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "SCAIREH0101",
+  "name": "ApriSensor Caire SCAIREH0101",
+  "nameShort": "ApriSensor Caire H0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "apri-sensor-caire-PM1",
+      "name": "ApriSensor Caire PM1",
+      "swesObservableProperty": "apri-sensor-caire-PM1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-caire-PM25",
+      "name": "ApriSensor Caire PM25",
+      "swesObservableProperty": "apri-sensor-caire-PM25",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-caire-PM10",
+      "name": "ApriSensor Caire PM10",
+      "swesObservableProperty": "apri-sensor-caire-PM10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-caire-rHum",
+      "name": "ApriSensor Caire rHum",
+      "swesObservableProperty": "apri-sensor-caire-rHum",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-caire-temperature",
+      "name": "ApriSensor Caire temperature",
+      "swesObservableProperty": "apri-sensor-caire-temperature",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-caire-location",
+      "name": "ApriSensor Caire Location",
+      "swesObservableProperty": "apri-sensor-caire-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-caire-PM1",
+      "name": "ApriSensor Caire PM1",
+      "swesObservableProperty": "apri-sensor-caire-PM1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-caire-PM25",
+      "name": "ApriSensor Caire PM25",
+      "swesObservableProperty": "apri-sensor-caire-PM25",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-caire-PM10",
+      "name": "ApriSensor Caire PM10",
+      "swesObservableProperty": "apri-sensor-caire-PM10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-caire-rHum",
+      "name": "ApriSensor Caire rHum",
+      "swesObservableProperty": "apri-sensor-caire-rHum",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-caire-temperature",
+      "name": "ApriSensor Caire temperature",
+      "swesObservableProperty": "apri-sensor-caire-temperature",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-caire-location",
+      "name": "ApriSensor Caire Location",
+      "swesObservableProperty": "apri-sensor-caire-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "scapeler_lat",
+      "name": "ApriSensor latitude",
+      "swesObservableProperty": "scapeler_latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "scapeler_lon",
+      "name": "ApriSensor longitude",
+      "swesObservableProperty": "scapeler_longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

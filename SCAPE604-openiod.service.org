@@ -1,0 +1,9 @@
+[Unit]
+Desription=SCAPE604-openiod-service - start or restart openiod-service service, respawn
+After=network.target
+[Service]
+ExecStart=/opt/SCAPE604/openiod/openiod-service.sh /opt/SCAPE604/log/SCAPE604-openiod-service.log
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

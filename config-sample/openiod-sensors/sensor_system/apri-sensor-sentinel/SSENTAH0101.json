@@ -1,0 +1,154 @@
+{
+  "id": "SSENTAH0101",
+  "name": "ApriSensor Sentinel SSENTAH0101",
+  "nameShort": "ApriSensor Sentinel Analysis H0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "apri-sensor-sentinel-o3",
+      "name": "ApriSensor Sentinel ozone",
+      "swesObservableProperty": "apri-sensor-sentinel-o3",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-sentinel-no2",
+      "name": "ApriSensor Sentinel NO2",
+      "swesObservableProperty": "apri-sensor-sentinel-no2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-sentinel-so2",
+      "name": "ApriSensor Sentinel so2",
+      "swesObservableProperty": "apri-sensor-sentinel-so2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-sentinel-co",
+      "name": "ApriSensor Sentinel CO",
+      "swesObservableProperty": "apri-sensor-sentinel-co",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-sentinel-pm25",
+      "name": "ApriSensor Sentinel PM2.5",
+      "swesObservableProperty": "apri-sensor-sentinel-pm25",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-sentinel-pm10",
+      "name": "ApriSensor Sentinel PM10",
+      "swesObservableProperty": "apri-sensor-sentinel-pm10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-sentinel-birch",
+      "name": "ApriSensor Sentinel birch pollen",
+      "swesObservableProperty": "apri-sensor-sentinel-birch",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-sentinel-grass",
+      "name": "ApriSensor Sentinel grass pollen",
+      "swesObservableProperty": "apri-sensor-sentinel-grass",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-sentinel-olive",
+      "name": "ApriSensor Sentinel olive pollen",
+      "swesObservableProperty": "apri-sensor-sentinel-olive",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-sentinel-ragweed",
+      "name": "ApriSensor Sentinel ragweed pollen",
+      "swesObservableProperty": "apri-sensor-sentinel-ragweed",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-sentinel-o3",
+      "name": "ApriSensor Sentinel ozone",
+      "swesObservableProperty": "apri-sensor-sentinel-o3",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-sentinel-no2",
+      "name": "ApriSensor Sentinel NO2",
+      "swesObservableProperty": "apri-sensor-sentinel-no2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-sentinel-so2",
+      "name": "ApriSensor Sentinel SO2",
+      "swesObservableProperty": "apri-sensor-sentinel-so2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-sentinel-co",
+      "name": "ApriSensor Sentinel CO",
+      "swesObservableProperty": "apri-sensor-sentinel-co",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-sentinel-pm25",
+      "name": "ApriSensor Sentinel PM2.5",
+      "swesObservableProperty": "apri-sensor-sentinel-pm25",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-sentinel-pm10",
+      "name": "ApriSensor Sentinel PM10",
+      "swesObservableProperty": "apri-sensor-sentinel-pm10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-sentinel-bird",
+      "name": "ApriSensor Sentinel birch pollen",
+      "swesObservableProperty": "apri-sensor-sentinel-birch",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-sentinel-grass",
+      "name": "ApriSensor Sentinel grass pollen",
+      "swesObservableProperty": "apri-sensor-sentinel-grass",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-sentinel-olive",
+      "name": "ApriSensor Sentinel olive pollen",
+      "swesObservableProperty": "apri-sensor-sentinel-olive",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-sentinel-ragweed",
+      "name": "ApriSensor Sentinel ragweed pollen",
+      "swesObservableProperty": "apri-sensor-sentinel-ragweed",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    }
+  ]
+}

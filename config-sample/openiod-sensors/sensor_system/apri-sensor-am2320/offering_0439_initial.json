@@ -1,0 +1,12 @@
+{
+  "id": "apri-sensor-am2320",
+  "region": "0439",
+  "offering": {
+    "id": "initial"
+  },
+  "procedure": [
+    {
+      "id": "SRHUMH0101"
+    }
+  ]
+}

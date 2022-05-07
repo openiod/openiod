@@ -1,0 +1,76 @@
+{
+    "system": {
+        "systemName": "openiod",
+        "systemCode": "SCAPE604",
+        "systemListenPort": "3000",
+        "serviceType": "openiod", 
+        "versionStr": "",
+        "version": {
+            "l1": 0,
+            "l2": 0,
+            "l3": 1
+        }
+    },
+	"context": {
+		"OpenIoD": {
+			"protocol":"https",
+			"host":"openiod.com",
+			"port":"",
+			"secret": "secret key",
+    		"expiresIn": "1d",
+			"resetSecret": "secret key for reset password",
+    		"resetExpiresIn": "1h",
+        	"db": {
+				"databaseType": "postgres",
+        		"databaseServer": "192.168.0.1",
+        		"databaseName": "db",
+        		"databaseAccount": "postgres",
+        		"databasePassword": "postgres"
+			}	
+		},
+		"OpenIoDSensor": {
+			"protocol":"http",
+			"host":"localhost",
+			"port":"4001",
+			"secret": "thisis1openiod$*&&%contextsecretkey#",
+    		"expiresIn": "30d",
+			"resetSecret": "hgha&SDjjhgjhs1#$625^%%E$g",
+	   		"resetExpiresIn": "1h",
+        	"db": {
+				"databaseType": "postgres",
+        		"databaseServer": "192.168.0.1",
+        		"databaseName": "db",
+        		"databaseAccount": "postgres",
+        		"databasePassword": "postgres"
+			}	
+		}
+	},	
+	"signature": {
+		"OpenIoD": {
+			"secret": "secret key signature",
+    		"expiresIn": "100d"
+		}
+	},	
+	"parameter" : {
+        "repositoryHttpServer": "http://192.168.0.151:8080",
+        "repositoryHttpProxy": "http://192.168.0.151:60080",        
+        "databaseType": "postgres",
+        "databaseServer": "ip-address",
+        "databaseName": "db",
+        "databaseAccount": "account",
+        "databasePassword": "password",
+        "sos": {
+			"databaseType": "postgres",
+        	"databaseServer": "ip-address",
+        	"databaseName": "sos",
+        	"databaseAccount": "account",
+        	"databasePassword": "password"
+		}	
+	},
+	"modules":[
+		{ "moduleName":"node-combo/node-combo.js",
+			"systemCode": "TSCAP-550",
+	        "systemListenPort": "3001"
+		}		
+	]
+}

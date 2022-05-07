@@ -1,0 +1,32 @@
+{
+  "name": "ILM-online",
+  "code": "ILM-online",
+  "port": "3000",
+  "type": "sensors",
+  "versionStr": "",
+  "version": {
+    "l1": 0,
+    "l2": 0,
+    "l3": 1
+  },
+  "service": "ilm-online",
+  "datasets": [
+    {
+        "name": "Online actual data",
+        "protocol": "http",
+        "server": "193.172.204.137",
+        "port": "80",
+        "url": "api",
+        "parameters": [
+          {
+            "key": "airboxid"
+          }
+        ],
+        "records": [
+          {
+            "id": "single"
+          }
+        ]
+    }
+  ]
+}

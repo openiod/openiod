@@ -1,0 +1,12 @@
+{
+  "id": "scapeler_co2",
+  "region": "0439",
+  "offering": {
+    "id": "initial"
+  },
+  "procedure": [
+    {
+      "id": "SCO2H0101"
+    }
+  ]
+}

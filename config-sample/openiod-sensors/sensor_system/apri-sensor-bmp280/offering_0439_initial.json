@@ -1,0 +1,12 @@
+{
+  "id": "apri-sensor-bmp280",
+  "region": "0439",
+  "offering": {
+    "id": "initial"
+  },
+  "procedure": [
+    {
+      "id": "SBMP280H0101"
+    }
+  ]
+}

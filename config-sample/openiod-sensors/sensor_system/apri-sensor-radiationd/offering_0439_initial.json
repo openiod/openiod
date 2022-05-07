@@ -1,0 +1,12 @@
+{
+  "id": "apri-sensor-radiationd",
+  "region": "0439",
+  "offering": {
+    "id": "initial"
+  },
+  "procedure": [
+    {
+      "id": "SRADDH0101"
+    }
+  ]
+}

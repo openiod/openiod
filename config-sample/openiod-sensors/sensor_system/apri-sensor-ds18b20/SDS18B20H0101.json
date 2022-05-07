@@ -1,0 +1,58 @@
+{
+  "id": "SDS18B20H0101",
+  "name": "ApriSensor DS18B20 SDS18B20H0101",
+  "nameShort": "ApriSensor DS18B20 H0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "apri-sensor-ds18b20-temperature",
+      "name": "ApriSensor DS18B20 Temperature",
+      "swesObservableProperty": "apri-sensor-ds18b20-temperature",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-ds18b20-latitude",
+      "name": "ApriSensor DS18B20 Latitude",
+      "swesObservableProperty": "apri-sensor-ds18b20-latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-ds18b20-location",
+      "name": "ApriSensor DS18B20 Location",
+      "swesObservableProperty": "apri-sensor-ds18b20-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-ds18b20-temperature",
+      "name": "ApriSensor DS18B20 Temperature",
+      "swesObservableProperty": "apri-sensor-ds18b20-temperature",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"celc"
+    },
+    {
+      "id": "apri-sensor-ds18b20-location",
+      "name": "ApriSensor DS18B20 Location",
+      "swesObservableProperty": "apri-sensor-ds18b20-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "apri-sensor-ds18b20-lat",
+      "name": "ApriSensor DS18B20 latitude",
+      "swesObservableProperty": "apri-sensor-ds18b20-latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "apri-sensor-ds18b20-lon",
+      "name": "ApriSensor DS18B20 longitude",
+      "swesObservableProperty": "apri-sensor-ds18b20-longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

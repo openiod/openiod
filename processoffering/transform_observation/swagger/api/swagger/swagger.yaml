@@ -1,0 +1,75 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: OpenIoD Transform Observation App
+# during dev, should point to your local machine
+host: localhost:10010
+# basePath prefixes all resource paths 
+basePath: /SCAPE604/openiod/transform_observation
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /action:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: openiod
+    get:
+      description: Transforms OpenIoD API into SensorML or OM and execute SOS service
+      # used as the method name of the controller
+      operationId: transform_observation
+      parameters:
+        - name: sensorsystem
+          in: query
+          description: sensorsystem e.g scapeler-shinyei or scapeler-dylos
+          required: false
+          type: string 
+        - name: action
+          in: query
+          description: action e.g insertsensor 
+          required: false
+          type: string 
+        - name: commit
+          in: query
+          description: commit action true or false  
+          required: false
+          type: boolean 
+        - name: offering
+          in: query
+          description: offering ID for sensorsystem e.g 'offering_0439_initial' 
+          required: false
+          type: string 
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/ActionResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /swagger:
+    x-swagger-pipe: swagger_raw
+# complex objects have schema definitions
+definitions:
+  ActionResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string

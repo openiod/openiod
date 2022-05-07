@@ -1,0 +1,12 @@
+{
+  "id": "apri-sensor-mics6814",
+  "region": "0439",
+  "offering": {
+    "id": "initial"
+  },
+  "procedure": [
+    {
+      "id": "SMICS6814H0101"
+    }
+  ]
+}

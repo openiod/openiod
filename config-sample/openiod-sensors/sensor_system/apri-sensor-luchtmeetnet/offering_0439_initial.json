@@ -1,0 +1,12 @@
+{
+  "id": "apri-sensor-luchtmeetnet",
+  "region": "0439",
+  "offering": {
+    "id": "initial"
+  },
+  "procedure": [
+    {
+      "id": "SLMNH0101"
+    }
+  ]
+}

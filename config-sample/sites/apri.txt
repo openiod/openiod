@@ -1,0 +1,22 @@
+site : {  
+  name: 'apri',
+  template: 'site-apri.html',
+  modules: [
+    {
+      name: 'apri-rss',
+      template: 'apri-rss.html',
+      instances: [
+        {
+          name: 'default',
+          template: 'default.html',
+        }
+      ]
+    }
+  ],
+  versionStr: "",
+  version: {
+    l1: 0,
+    l2: 0,
+    l3: 1
+  }
+}

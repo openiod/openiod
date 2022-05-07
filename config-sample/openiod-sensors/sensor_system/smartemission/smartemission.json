@@ -1,0 +1,12 @@
+{
+  "id": "smartemission",
+  "region": "0439",
+  "offering": {
+    "id": "offering-41"
+  },
+  "procedure": [
+    {
+      "id": "station-41"
+    }
+  ]
+}

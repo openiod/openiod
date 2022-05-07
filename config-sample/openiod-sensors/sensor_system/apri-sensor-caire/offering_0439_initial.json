@@ -1,0 +1,12 @@
+{
+  "id": "apri-sensor-caire",
+  "region": "0439",
+  "offering": {
+    "id": "initial"
+  },
+  "procedure": [
+    {
+      "id": "SCAIREH0101"
+    }
+  ]
+}

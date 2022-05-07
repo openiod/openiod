@@ -1,0 +1,2 @@
+# sourced by /etc/init.d/SCAPE604-openiod
+NODEJS_EXEC=/opt/SCAPE604/openiod/openiod.sh

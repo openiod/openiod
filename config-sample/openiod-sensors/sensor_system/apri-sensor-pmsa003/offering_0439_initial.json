@@ -1,0 +1,12 @@
+{
+  "id": "apri-sensor-pmsa003",
+  "region": "0439",
+  "offering": {
+    "id": "initial"
+  },
+  "procedure": [
+    {
+      "id": "SPMSA003H0101"
+    }
+  ]
+}

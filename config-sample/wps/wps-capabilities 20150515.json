@@ -1,0 +1,306 @@
+{
+  "name": "WPS capabilities",
+  "code": "WPS-Capabilities",
+  "versionStr": "",
+  "version": {
+    "l1": 0,
+    "l2": 0,
+    "l3": 1
+  },
+  "service": "WPS",
+  "wpsLanguages": {
+    "wpsDefault": {
+      "owsLanguage": "en_US"
+    },
+    "wpsSupported": [
+      {
+        "owsLanguage": "en_US"
+      },
+      {
+        "owsLanguage": "nl_NL"
+      }
+    ]
+  },
+  "operations": {
+    "GetCapabilities": {
+      
+    },
+    "DescribeProcess": {
+      
+    },
+    "Execute": {
+      
+    }
+  },
+  "processOfferings": {
+    "observation_aireas_actual_import": {
+      "dependencies": {
+        "modules": [
+          
+        ]
+      },
+      "requestType": "EXECUTE",
+      "identifier": "observation_aireas_actual_import",
+      "description": "Import actual AiREAS observations",
+      "formats": [
+        {
+          "xml": {
+            "format": "XML"
+          }
+        },
+        {
+          "json": {
+            "format": "JSON"
+          }
+        },
+        {
+          "raw": {
+            "format": "RAW"
+          }
+        }
+      ],
+      "parameters": {
+        "featureofinterest": {
+          "eg": "[25.cal|all]"
+        }
+      }
+    },
+    "observation_aireas_actual_grid": {
+      "dependencies": {
+        
+      },
+      "requestType": "EXECUTE",
+      "identifier": "observation_aireas_actual_grid",
+      "description": "Retrieve actual AiREAS Grid calculated data",
+      "formats": [
+        {
+          "xml": {
+            "format": "XML"
+          }
+        },
+        {
+          "json": {
+            "format": "JSON"
+          }
+        },
+        {
+          "raw": {
+            "format": "RAW"
+          }
+        }
+      ],
+      "parameters": {
+        "featureofinterest": {
+          "eg": "[25.cal|all]"
+        }
+      }
+    },
+    "observation_aireas_average": {
+      "dependencies": {
+        
+      },
+      "requestType": "EXECUTE",
+      "identifier": "observation_aireas_average",
+      "description": "Retrieve calculated observation averages for an Airbox",
+      "formats": [
+        {
+          "xml": {
+            "format": "XML"
+          }
+        },
+        {
+          "json": {
+            "format": "JSON"
+          }
+        },
+        {
+          "raw": {
+            "format": "RAW"
+          }
+        }
+      ],
+      "parameters": {
+        "featureofinterest": {
+          "eg": "[25.cal|all]"
+        },
+        "period": {
+          "default": "year",
+          "supported": ["day", "month", "year"]
+        }
+      }
+    },
+    "NDW_siteTable_import": {
+      "dependencies": {
+        
+      },
+      "requestType": "EXECUTE",
+      "identifier": "NDW_siteTable_import",
+      "description": "Import of NDW Site Table",
+      "formats": [
+        {
+          "xml": {
+            "format": "XML"
+          }
+        },
+        {
+          "json": {
+            "format": "JSON"
+          }
+        },
+        {
+          "raw": {
+            "format": "RAW"
+          }
+        }
+      ]
+    },
+    "NDW_siteTable_update": {
+      "dependencies": {
+        
+      },
+      "requestType": "EXECUTE",
+      "identifier": "NDW_siteTable_update",
+      "description": "Update NDW Site Table from imported data",
+      "formats": [
+        {
+          "xml": {
+            "format": "XML"
+          }
+        },
+        {
+          "json": {
+            "format": "JSON"
+          }
+        },
+        {
+          "raw": {
+            "format": "RAW"
+          }
+        }
+      ]
+    },
+    "NDW_trafficSpeed_import": {
+      "dependencies": {
+        
+      },
+      "requestType": "EXECUTE",
+      "identifier": "NDW_trafficSpeed_import",
+      "description": "Import of NDW Trafficspeed measurements",
+      "formats": [
+        {
+          "xml": {
+            "format": "XML"
+          }
+        },
+        {
+          "json": {
+            "format": "JSON"
+          }
+        },
+        {
+          "raw": {
+            "format": "RAW"
+          }
+        }
+      ]
+    },
+    "NDW_trafficSpeed_update": {
+      "dependencies": {
+        
+      },
+      "requestType": "EXECUTE",
+      "identifier": "NDW_trafficSpeed_update",
+      "description": "Update NDW Trafficspeed measurements from imported data",
+      "formats": [
+        {
+          "xml": {
+            "format": "XML"
+          }
+        },
+        {
+          "json": {
+            "format": "JSON"
+          }
+        },
+        {
+          "raw": {
+            "format": "RAW"
+          }
+        }
+      ]
+    },
+    "NDW_trafficSpeed": {
+      "dependencies": {
+      },
+      "requestType": "EXECUTE",
+      "identifier": "NDW_trafficSpeed",
+      "description": "get NDW Trafficspeed measurements",
+      "formats": [
+        {
+          "xml": {
+            "format": "XML"
+          }
+        },
+        {
+          "json": {
+            "format": "JSON"
+          }
+        },
+        {
+          "raw": {
+            "format": "RAW"
+          }
+        }
+      ]
+    },
+    "NDW_travelTime_import": {
+      "dependencies": {
+      },
+      "requestType": "EXECUTE",
+      "identifier": "NDW_travelTime_import",
+      "description": "Import of NDW Traveltime measurements",
+      "formats": [
+        {
+          "xml": {
+            "format": "XML"
+          }
+        },
+        {
+          "json": {
+            "format": "JSON"
+          }
+        },
+        {
+          "raw": {
+            "format": "RAW"
+          }
+        }
+      ]
+    },
+    "NDW_travelTime_update": {
+      "dependencies": {
+        
+      },
+      "requestType": "EXECUTE",
+      "identifier": "NDW_travelTime_update",
+      "description": "Update NDW Traveltime measurements from imported data",
+      "formats": [
+        {
+          "xml": {
+            "format": "XML"
+          }
+        },
+        {
+          "json": {
+            "format": "JSON"
+          }
+        },
+        {
+          "raw": {
+            "format": "RAW"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "id": "SJOSUINOH0101",
+  "name": "ApriSensor Josuino SJOSUINOH0101",
+  "nameShort": "ApriSensor Josuino H0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "apri-sensor-josuino-PM25",
+      "name": "ApriSensor Josuino PM25",
+      "swesObservableProperty": "apri-sensor-josuino-PM25",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-josuino-PM10",
+      "name": "ApriSensor Josuino PM10",
+      "swesObservableProperty": "apri-sensor-josuino-PM10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-josuino-CO2",
+      "name": "ApriSensor Josuino CO2",
+      "swesObservableProperty": "apri-sensor-josuino-CO2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-josuino-rHum",
+      "name": "ApriSensor Josuino rHum",
+      "swesObservableProperty": "apri-sensor-josuino-rHum",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-josuino-temperature",
+      "name": "ApriSensor Josuino temperature",
+      "swesObservableProperty": "apri-sensor-josuino-temperature",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-josuino-pressure",
+      "name": "ApriSensor Josuino pressure",
+      "swesObservableProperty": "apri-sensor-josuino-pressure",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-josuino-light",
+      "name": "ApriSensor Josuino light",
+      "swesObservableProperty": "apri-sensor-josuino-light",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-josuino-location",
+      "name": "ApriSensor Josuino Location",
+      "swesObservableProperty": "apri-sensor-josuino-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-josuino-PM25",
+      "name": "ApriSensor Josuino PM25",
+      "swesObservableProperty": "apri-sensor-josuino-PM25",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-josuino-PM10",
+      "name": "ApriSensor Josuino PM10",
+      "swesObservableProperty": "apri-sensor-josuino-PM10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-josuino-CO2",
+      "name": "ApriSensor Josuino CO2",
+      "swesObservableProperty": "apri-sensor-josuino-CO2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-josuino-rHum",
+      "name": "ApriSensor Josuino rHum",
+      "swesObservableProperty": "apri-sensor-josuino-rHum",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-josuino-temperature",
+      "name": "ApriSensor Josuino temperature",
+      "swesObservableProperty": "apri-sensor-josuino-temperature",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-josuino-pressure",
+      "name": "ApriSensor Josuino pressure",
+      "swesObservableProperty": "apri-sensor-josuino-pressure",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+	{
+      "id": "apri-sensor-josuino-light",
+      "name": "ApriSensor Josuino light",
+      "swesObservableProperty": "apri-sensor-josuino-light",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-josuino-location",
+      "name": "ApriSensor Josuino Location",
+      "swesObservableProperty": "apri-sensor-josuino-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "scapeler_lat",
+      "name": "ApriSensor latitude",
+      "swesObservableProperty": "scapeler_latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "scapeler_lon",
+      "name": "ApriSensor longitude",
+      "swesObservableProperty": "scapeler_longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

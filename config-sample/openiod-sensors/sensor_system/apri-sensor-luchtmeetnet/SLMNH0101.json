@@ -1,0 +1,248 @@
+{
+  "id": "SLMNH0101",
+  "name": "ApriSensor Luchtmeetnet SLMNH0101",
+  "nameShort": "ApriSensor Luchtmeetnet H0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "apri-sensor-luchtmeetnet-PM25",
+      "name": "ApriSensor Luchtmeetnet PM25",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-PM25",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-PM10",
+      "name": "ApriSensor Luchtmeetnet PM10",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-PM10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-NO",
+      "name": "ApriSensor Luchtmeetnet NO",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-NO",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-NO2",
+      "name": "ApriSensor Luchtmeetnet NO2",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-NO2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-SO2",
+      "name": "ApriSensor Luchtmeetnet SO2",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-SO2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-O3",
+      "name": "ApriSensor Luchtmeetnet O3",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-O3",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-C6H6",
+      "name": "ApriSensor Luchtmeetnet C6H6",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-C6H6",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-C7H8",
+      "name": "ApriSensor Luchtmeetnet C7H8",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-C7H8",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-C8H10",
+      "name": "ApriSensor Luchtmeetnet C8H10",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-C8H10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-CO",
+      "name": "ApriSensor Luchtmeetnet CO",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-CO",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-H2S",
+      "name": "ApriSensor Luchtmeetnet H2S",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-H2S",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-PS",
+      "name": "ApriSensor Luchtmeetnet PS",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-PS",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-NH3",
+      "name": "ApriSensor Luchtmeetnet NH3",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-NH3",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-FN",
+      "name": "ApriSensor Luchtmeetnet FN",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-FN",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-Offset",
+      "name": "ApriSensor Luchtmeetnet Offset",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-Offset",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-location",
+      "name": "ApriSensor Luchtmeetnet Location",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-luchtmeetnet-PM25",
+      "name": "ApriSensor Luchtmeetnet PM25",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-PM25",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-PM10",
+      "name": "ApriSensor Luchtmeetnet PM10",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-PM10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-NO",
+      "name": "ApriSensor Luchtmeetnet NO",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-NO",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-NO2",
+      "name": "ApriSensor Luchtmeetnet NO2",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-NO2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-SO2",
+      "name": "ApriSensor Luchtmeetnet SO2",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-SO2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-O3",
+      "name": "ApriSensor Luchtmeetnet O3",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-O3",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+	  {
+      "id": "apri-sensor-luchtmeetnet-C6H6",
+      "name": "ApriSensor Luchtmeetnet C6H6",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-C6H6",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-C7H8",
+      "name": "ApriSensor Luchtmeetnet C7H8",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-C7H8",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-C8H10",
+      "name": "ApriSensor Luchtmeetnet C8H10",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-C8H10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-CO",
+      "name": "ApriSensor Luchtmeetnet CO",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-CO",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-H2S",
+      "name": "ApriSensor Luchtmeetnet H2S",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-H2S",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-PS",
+      "name": "ApriSensor Luchtmeetnet PS",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-PS",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-NH3",
+      "name": "ApriSensor Luchtmeetnet NH3",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-NH3",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-FN",
+      "name": "ApriSensor Luchtmeetnet FN",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-FN",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-Offset",
+      "name": "ApriSensor Luchtmeetnet Offset",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-Offset",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luchtmeetnet-location",
+      "name": "ApriSensor Luchtmeetnet Location",
+      "swesObservableProperty": "apri-sensor-luchtmeetnet-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "scapeler_lat",
+      "name": "ApriSensor latitude",
+      "swesObservableProperty": "scapeler_latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "scapeler_lon",
+      "name": "ApriSensor longitude",
+      "swesObservableProperty": "scapeler_longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "scapeler_shinyei",
+  "region": "0439",
+  "offering": {
+    "id": "initial"
+  },
+  "procedure": [
+    {
+      "id": "SSH0101"
+    }
+  ]
+}

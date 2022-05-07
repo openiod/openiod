@@ -1,0 +1,136 @@
+{
+  "id": "SLUFTDH0101",
+  "name": "ApriSensor Luftdaten SLUFTDH0101",
+  "nameShort": "ApriSensor Luftdaten H0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "apri-sensor-luftdaten-PM25",
+      "name": "ApriSensor Luftdaten PM25",
+      "swesObservableProperty": "apri-sensor-luftdaten-PM25",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luftdaten-PM10",
+      "name": "ApriSensor Luftdaten PM10",
+      "swesObservableProperty": "apri-sensor-luftdaten-PM10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luftdaten-CO2",
+      "name": "ApriSensor Luftdaten CO2",
+      "swesObservableProperty": "apri-sensor-luftdaten-CO2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luftdaten-rHum",
+      "name": "ApriSensor Luftdaten rHum",
+      "swesObservableProperty": "apri-sensor-luftdaten-rHum",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luftdaten-temperature",
+      "name": "ApriSensor Luftdaten temperature",
+      "swesObservableProperty": "apri-sensor-luftdaten-temperature",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luftdaten-pressure",
+      "name": "ApriSensor Luftdaten pressure",
+      "swesObservableProperty": "apri-sensor-luftdaten-pressure",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luftdaten-light",
+      "name": "ApriSensor Luftdaten light",
+      "swesObservableProperty": "apri-sensor-luftdaten-light",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-luftdaten-location",
+      "name": "ApriSensor Luftdaten Location",
+      "swesObservableProperty": "apri-sensor-luftdaten-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-luftdaten-PM25",
+      "name": "ApriSensor Luftdaten PM25",
+      "swesObservableProperty": "apri-sensor-luftdaten-PM25",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luftdaten-PM10",
+      "name": "ApriSensor Luftdaten PM10",
+      "swesObservableProperty": "apri-sensor-luftdaten-PM10",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luftdaten-CO2",
+      "name": "ApriSensor Luftdaten CO2",
+      "swesObservableProperty": "apri-sensor-luftdaten-CO2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luftdaten-rHum",
+      "name": "ApriSensor Luftdaten rHum",
+      "swesObservableProperty": "apri-sensor-luftdaten-rHum",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luftdaten-temperature",
+      "name": "ApriSensor Luftdaten temperature",
+      "swesObservableProperty": "apri-sensor-luftdaten-temperature",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luftdaten-pressure",
+      "name": "ApriSensor Luftdaten pressure",
+      "swesObservableProperty": "apri-sensor-luftdaten-pressure",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+	{
+      "id": "apri-sensor-luftdaten-light",
+      "name": "ApriSensor Luftdaten light",
+      "swesObservableProperty": "apri-sensor-luftdaten-light",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-luftdaten-location",
+      "name": "ApriSensor Luftdaten Location",
+      "swesObservableProperty": "apri-sensor-luftdaten-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "scapeler_lat",
+      "name": "ApriSensor latitude",
+      "swesObservableProperty": "scapeler_latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "scapeler_lon",
+      "name": "ApriSensor longitude",
+      "swesObservableProperty": "scapeler_longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

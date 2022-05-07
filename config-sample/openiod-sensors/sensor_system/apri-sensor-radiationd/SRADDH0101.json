@@ -1,0 +1,52 @@
+{
+  "id": "SRADDH0101",
+  "name": "ApriSensor RadiationD SRADDH0101",
+  "nameShort": "ApriSensor SRADD H0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "apri-sensor-radiationd-rad",
+      "name": "ApriSensor RadiationD Radiation",
+      "swesObservableProperty": "apri-sensor-radiationd-rad",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-radiationd-location",
+      "name": "ApriSensor RadiationD Location",
+      "swesObservableProperty": "apri-sensor-radiationd-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-radiationd-rad",
+      "name": "ApriSensor RadiationD Radiation",
+      "swesObservableProperty": "apri-sensor-radiationd-rad",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"count"
+    },
+    {
+      "id": "apri-sensor-radiationd-location",
+      "name": "ApriSensor RadiationD Location",
+      "swesObservableProperty": "apri-sensor-radiationd-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "apri-sensor-radiationd-latitude",
+      "name": "ApriSensor RadiationD latitude",
+      "swesObservableProperty": "apri-sensor-radiationd-latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "apri-sensor-radiationd-longitude",
+      "name": "ApriSensor RadiationD longitude",
+      "swesObservableProperty": "apri-sensor-radiationd-longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

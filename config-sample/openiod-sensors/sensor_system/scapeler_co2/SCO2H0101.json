@@ -1,0 +1,60 @@
+{
+  "id": "SCO2H0101",
+  "name": "Scapeler CO2 SCO2H0101",
+  "nameShort": "Scapeler CO2 H0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "scapeler_co2",
+      "name": "Scapeler CO2",
+      "swesObservableProperty": "scapeler_co2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "scapeler_co2_location",
+      "name": "Scapeler CO2 Location",
+      "swesObservableProperty": "scapeler_co2_location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "scapeler_co2",
+      "name": "Scapeler CO2",
+      "swesObservableProperty": "scapeler_co2",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "scapeler_co2_temp",
+      "name": "Scapeler CO2 Temp",
+      "swesObservableProperty": "scapeler_co2_temp",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"celc"
+    },
+    {
+      "id": "scapeler_co2_location",
+      "name": "Scapeler CO2 Location",
+      "swesObservableProperty": "scapeler_co2_location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "scapeler_lat",
+      "name": "Scapeler latitude",
+      "swesObservableProperty": "scapeler_latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "scapeler_lon",
+      "name": "Scapeler longitude",
+      "swesObservableProperty": "scapeler_longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

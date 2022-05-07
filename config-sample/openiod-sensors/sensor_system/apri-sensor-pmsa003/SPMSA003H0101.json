@@ -1,0 +1,206 @@
+{
+  "id": "SPMSA003H0101",
+  "name": "ApriSensor PMSA003 SPMSA003H0101",
+  "nameShort": "ApriSensor PMSA003 0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "apri-sensor-pmsa003-concPM1_0_CF1",
+      "name": "ApriSensor PMSA003 concPM1_0_CF1",
+      "swesObservableProperty": "apri-sensor-pmsa003-concPM1_0_CF1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-pmsa003-concPM2_5_CF1",
+      "name": "ApriSensor PMSA003 concPM2_5_CF1",
+      "swesObservableProperty": "apri-sensor-pmsa003-concPM2_5_CF1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-pmsa003-concPM10_0_CF1",
+      "name": "ApriSensor PMSA003 concPM10_0_CF1",
+      "swesObservableProperty": "apri-sensor-pmsa003-concPM10_0_CF1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-pmsa003-concPM1_0_amb",
+      "name": "ApriSensor PMSA003 concPM1_0_amb",
+      "swesObservableProperty": "apri-sensor-pmsa003-concPM1_0_amb",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-pmsa003-concPM2_5_amb",
+      "name": "ApriSensor PMSA003 concPM2_5_amb",
+      "swesObservableProperty": "apri-sensor-pmsa003-concPM2_5_amb",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-pmsa003-concPM10_0_amb",
+      "name": "ApriSensor PMSA003 concPM10_0_amb",
+      "swesObservableProperty": "apri-sensor-pmsa003-concPM10_0_amb",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-pmsa003-rawGt0_3um",
+      "name": "ApriSensor PMSA003 rawGt0_3um",
+      "swesObservableProperty": "apri-sensor-pmsa003-rawGt0_3um",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-pmsa003-rawGt0_5um",
+      "name": "ApriSensor PMSA003 rawGt0_5um",
+      "swesObservableProperty": "apri-sensor-pmsa003-rawGt0_5um",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-pmsa003-rawGt1_0um",
+      "name": "ApriSensor PMSA003 rawGt1_0um",
+      "swesObservableProperty": "apri-sensor-pmsa003-rawGt1_0um",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-pmsa003-rawGt2_5um",
+      "name": "ApriSensor PMSA003 rawGt2_5um",
+      "swesObservableProperty": "apri-sensor-pmsa003-rawGt2_5um",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-pmsa003-rawGt5_0um",
+      "name": "ApriSensor PMSA003 rawGt5_0um",
+      "swesObservableProperty": "apri-sensor-pmsa003-rawGt5_0um",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-pmsa003-rawGt10_0um",
+      "name": "ApriSensor PMSA003 rawGt10_0um",
+      "swesObservableProperty": "apri-sensor-pmsa003-rawGt10_0um",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-pmsa003-location",
+      "name": "ApriSensor PMSA003 Location",
+      "swesObservableProperty": "apri-sensor-pmsa003-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-pmsa003-concPM1_0_CF1",
+      "name": "ApriSensor PMSA003 concPM1_0_CF1",
+      "swesObservableProperty": "apri-sensor-pmsa003-concPM1_0_CF1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-pmsa003-concPM2_5_CF1",
+      "name": "ApriSensor PMSA003 concPM2_5_CF1",
+      "swesObservableProperty": "apri-sensor-pmsa003-concPM2_5_CF1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-pmsa003-concPM10_0_CF1",
+      "name": "ApriSensor PMSA003 concPM10_0_CF1",
+      "swesObservableProperty": "apri-sensor-pmsa003-concPM10_0_CF1",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-pmsa003-concPM1_0_amb",
+      "name": "ApriSensor PMSA003 concPM1_0_amb",
+      "swesObservableProperty": "apri-sensor-pmsa003-concPM1_0_amb",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-pmsa003-concPM2_5_amb",
+      "name": "ApriSensor PMSA003 concPM2_5_amb",
+      "swesObservableProperty": "apri-sensor-pmsa003-concPM2_5_amb",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-pmsa003-concPM10_0_amb",
+      "name": "ApriSensor PMSA003 concPM10_0_amb",
+      "swesObservableProperty": "apri-sensor-pmsa003-concPM10_0_amb",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+	{
+      "id": "apri-sensor-pmsa003-rawGt0_3um",
+      "name": "ApriSensor PMSA003 rawGt0_3um",
+      "swesObservableProperty": "apri-sensor-pmsa003-rawGt0_3um",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-pmsa003-rawGt0_5um",
+      "name": "ApriSensor PMSA003 rawGt0_5um",
+      "swesObservableProperty": "apri-sensor-pmsa003-rawGt0_5um",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-pmsa003-rawGt1_0um",
+      "name": "ApriSensor PMSA003 rawGt1_0um",
+      "swesObservableProperty": "apri-sensor-pmsa003-rawGt1_0um",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-pmsa003-rawGt2_5um",
+      "name": "ApriSensor PMSA003 rawGt2_5um",
+      "swesObservableProperty": "apri-sensor-pmsa003-rawGt2_5um",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-pmsa003-rawGt5_0um",
+      "name": "ApriSensor PMSA003 rawGt5_0um",
+      "swesObservableProperty": "apri-sensor-pmsa003-rawGt5_0um",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-pmsa003-rawGt10_0um",
+      "name": "ApriSensor PMSA003 rawGt10_0um",
+      "swesObservableProperty": "apri-sensor-pmsa003-rawGt10_0um",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"ppm"
+    },
+    {
+      "id": "apri-sensor-pmsa003-location",
+      "name": "ApriSensor PMSA003 Location",
+      "swesObservableProperty": "apri-sensor-pmsa003-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "scapeler_lat",
+      "name": "ApriSensor latitude",
+      "swesObservableProperty": "scapeler_latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "scapeler_lon",
+      "name": "ApriSensor longitude",
+      "swesObservableProperty": "scapeler_longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}

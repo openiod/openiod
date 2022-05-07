@@ -1,0 +1,12 @@
+{
+  "id": "apri-sensor-sentinel",
+  "region": "europe",
+  "offering": {
+    "id": "ensemble_surface_forecast"
+  },
+  "procedure": [
+    {
+      "id": "SSENTH0101"
+    }
+  ]
+}

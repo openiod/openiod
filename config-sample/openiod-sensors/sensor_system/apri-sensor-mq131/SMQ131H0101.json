@@ -1,0 +1,58 @@
+{
+  "id": "SMQ131H0101",
+  "name": "ApriSensor MQ131 SMQ131H0101",
+  "nameShort": "ApriSensor MQ131 H0101",
+  "type": "smlPhysicalSystem",
+  "sensorMlVersion": "1.0.1",
+  "defaults": {
+    "urlPrefix": "http://wiki.aireas.com/index.php/"
+  },
+  "input": [
+    {
+      "id": "apri-sensor-mq131-ozone",
+      "name": "ApriSensor MQ131 Ozone",
+      "swesObservableProperty": "apri-sensor-mq131-ozone",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-mq131-latitude",
+      "name": "ApriSensor MQ131 Latitude",
+      "swesObservableProperty": "apri-sensor-mq131-latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    },
+    {
+      "id": "apri-sensor-mq131-location",
+      "name": "ApriSensor MQ131 Location",
+      "swesObservableProperty": "apri-sensor-mq131-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    }
+  ],
+  "output": [
+    {
+      "id": "apri-sensor-mq131-ozone",
+      "name": "ApriSensor MQ131 Ozone",
+      "swesObservableProperty": "apri-sensor-mq131-ozone",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+	  "resultType":"gml:MeasureType",
+	  "resultUom":"celc"
+    },
+    {
+      "id": "apri-sensor-mq131-location",
+      "name": "ApriSensor MQ131 Location",
+      "swesObservableProperty": "apri-sensor-mq131-location",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_TextObservation"
+    },
+    {
+      "id": "apri-sensor-mq131-lat",
+      "name": "ApriSensor MQ131 latitude",
+      "swesObservableProperty": "apri-sensor-mq131-latitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    },
+    {
+      "id": "apri-sensor-mq131-lon",
+      "name": "ApriSensor MQ131 longitude",
+      "swesObservableProperty": "apri-sensor-mq131-longitude",
+      "sosObservationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_GeometryObservation"
+    }
+  ]
+}
