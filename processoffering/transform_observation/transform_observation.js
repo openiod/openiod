@@ -194,6 +194,10 @@ module.exports = {
       fiwareService = 'luftdaten_v0'
       fiwareServicePath = '/sds011'
     }
+    if (data.sensorSystem=='apri-sensor-luchtmeetnet') {
+      fiwareService = 'luchtmeetnet_v0'
+      fiwareServicePath = '/lmn'
+    }
 
     var headers ={
       'content-type': 'application/json'
